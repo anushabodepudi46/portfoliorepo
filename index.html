@@ -1,13 +1,4 @@
- # Cloud-init script to install Nginx and host your portfolio
-  custom_data = base64encode(<<EOF
-#!/bin/bash
-sudo apt-get update -y
-sudo apt-get install -y nginx
-sudo systemctl enable nginx
-sudo systemctl start nginx
-
-sudo tee /var/www/html/index.html > /dev/null <<'HTML'
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
